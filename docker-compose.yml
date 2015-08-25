@@ -1,8 +1,7 @@
 application:
     build: code
     volumes:
-        - api:/var/www/api
-        - logs/symfony:/var/www/api/app/logs
+        - /var/www/symfony:/var/www/symfony
     tty: true
 db:
     image: mysql
@@ -30,4 +29,4 @@ nginx:
     volumes_from:
         - application
     volumes:
-        - ./logs/nginx/:/var/log/nginx
+        - /var/log/nginx:/var/log/nginx
