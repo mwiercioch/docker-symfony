@@ -11,7 +11,7 @@ This repo provides default configuration for symfony application with vagrant su
   4. `cd /workspace` on vagrant machine
   5. Run `docker-compose up -d`
   6. Run `source .bash_profile`
-  7. `cd /var/www/symfony` and start developing
+  7. `cd /var/www/symfony-app` and start developing
 
 ##Change local project directory
 
