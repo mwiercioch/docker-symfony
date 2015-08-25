@@ -10,6 +10,7 @@ ADD symfony.pool.conf /etc/php5/fpm/pool.d/
 RUN usermod -u 1000 www-data
 
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+RUN curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony && chmod a+x /usr/local/bin/symfony
 
 CMD ["php5-fpm", "-F"]
 
