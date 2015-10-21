@@ -12,6 +12,9 @@ db:
         MYSQL_DATABASE: symfony
         MYSQL_USER: root
         MYSQL_PASSWORD: root
+    volumes:
+        - /var/lib/mysql:/var/lib/mysql
+        - /var/log/mysql:/var/log/mysql
 php:
     build: php-fpm
     expose:
