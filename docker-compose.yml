@@ -33,6 +33,11 @@ nginx:
         - application
     volumes:
         - /var/log/nginx:/var/log/nginx
+
+memcached:
+  image: memcached
+  ports:
+    - "11211:11211"
         
 phpmyadmin:
    image: corbinu/docker-phpmyadmin
