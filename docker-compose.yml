@@ -33,3 +33,14 @@ nginx:
         - application
     volumes:
         - /var/log/nginx:/var/log/nginx
+        
+phpmyadmin:
+   image: corbinu/docker-phpmyadmin
+   ports :
+    - "88:80"
+   environment:
+    - MYSQL_USERNAME=root
+    - MYSQL_PASSWORD=root
+    - MYSQL_PASSWORD=workspace_db_1
+   links:
+    - db
